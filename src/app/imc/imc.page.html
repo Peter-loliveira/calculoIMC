@@ -1,0 +1,41 @@
+<body>
+  
+<ion-header>
+  <ion-toolbar>
+    <ion-title>Calcular IMC</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+
+  <ion-row>
+    <ion-col>
+      <ion-item>
+        <ion-label class="label-campos" position="floating">Peso</ion-label>
+        <ion-input type='number'></ion-input>
+      </ion-item>
+      <ion-item>
+        <ion-label class="label-campos" position="floating">Altura</ion-label>
+        <ion-input type='number'></ion-input>
+      </ion-item>
+    </ion-col>
+  </ion-row>
+
+  <ion-row>
+    <ion-col>
+      <ion-button expand="full" (click)="criarUsuario()">Calcular IMC</ion-button>
+    </ion-col>
+  </ion-row>
+  <ion-row>
+    <ion-col>
+      <ion-item>
+        <ion-label>RESULTADO :</ion-label>
+        <ion-label>VALOR</ion-label>
+      </ion-item>
+    </ion-col>
+  </ion-row>
+
+
+
+</ion-content>
+</body>
