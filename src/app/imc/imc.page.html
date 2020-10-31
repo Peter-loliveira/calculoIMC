@@ -1,8 +1,6 @@
-<body>
-  
 <ion-header>
   <ion-toolbar>
-    <ion-title>Calcular IMC</ion-title>
+    <ion-title>Calcule seu IMC</ion-title>
   </ion-toolbar>
 </ion-header>
 
@@ -11,31 +9,28 @@
   <ion-row>
     <ion-col>
       <ion-item>
-        <ion-label class="label-campos" position="floating">Peso</ion-label>
-        <ion-input type='number'></ion-input>
+        <ion-label class="label-campos" position="floating" clearInput value="clear me">Peso</ion-label>
+        <ion-input min = '0' type='number' [(ngModel)]='DadosIMC.peso'></ion-input>
       </ion-item>
       <ion-item>
         <ion-label class="label-campos" position="floating">Altura</ion-label>
-        <ion-input type='number'></ion-input>
+        <ion-input min = '0' type='number' [(ngModel)]='DadosIMC.altura'></ion-input>
       </ion-item>
     </ion-col>
   </ion-row>
 
   <ion-row>
     <ion-col>
-      <ion-button expand="full" (click)="criarUsuario()">Calcular IMC</ion-button>
+      <ion-fab-button (click)="calcularImc()">
+        Calcular
+      </ion-fab-button>
     </ion-col>
   </ion-row>
-  <ion-row>
-    <ion-col>
-      <ion-item>
-        <ion-label>RESULTADO :</ion-label>
-        <ion-label>VALOR</ion-label>
-      </ion-item>
-    </ion-col>
-  </ion-row>
-
-
 
 </ion-content>
-</body>
+
+<ion-footer>
+  <ion-item class="resultados">
+    <ion-label id='ValorImc'></ion-label>
+  </ion-item>
+</ion-footer>

@@ -1,4 +1,4 @@
 export class Imc {
-    public Altura: number
-    public Peso: number
+    public altura: number
+    public peso: number
 }

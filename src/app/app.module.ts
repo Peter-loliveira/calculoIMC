@@ -9,19 +9,22 @@ import { StatusBar } from '@ionic-native/status-bar/ngx';
 
 import { AppComponent } from './app.component';
 import { AppRoutingModule } from './app-routing.module';
+import { ImcService } from 'src/services/ImcService';
 
-import { ImcPageModule } from './imc/imc.module'
-
+import { HttpClientModule } from '@angular/common/http'
 
 @NgModule({
   declarations: [AppComponent],
   entryComponents: [],
   imports: [
-    ImcPageModule,
-    BrowserModule, IonicModule.forRoot(), AppRoutingModule],
+    BrowserModule, 
+    IonicModule.forRoot(), 
+    AppRoutingModule, 
+    HttpClientModule],
   providers: [
     StatusBar,
     SplashScreen,
+    ImcService,
     { provide: RouteReuseStrategy, useClass: IonicRouteStrategy }
   ],
   bootstrap: [AppComponent]

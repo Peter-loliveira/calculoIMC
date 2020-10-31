@@ -1,0 +1,43 @@
+
+
+ion-title {
+    color: #cc348d;
+}
+
+ion-title {
+    font-size: 20px;
+    font-weight: bold;
+}
+
+ion-toolbar {
+    text-align: center;
+}
+
+ion-fab-button {
+    margin-top: 4rem;
+    width : 10rem;
+    height: 10rem;
+
+    // Centraliza o botão
+    margin-left: calc(50% - 5rem);
+
+    --background: #cc348d;
+    --color: #fff;
+
+    // Bordas do biotã
+    --border-width: 1px;
+    --border-color: #363636;
+    --border-style:solid;
+
+    font-size: 2rem;
+}
+
+#ValorImc {
+    font-size: 5rem;
+    font-weight: bold;
+    color: #cc348d;
+}
+
+.resultados {
+    text-align: center;
+}
