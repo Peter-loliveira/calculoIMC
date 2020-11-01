@@ -9,14 +9,20 @@ import { Component, OnInit } from "@angular/core";
 })
 
 export class ImcPage implements OnInit {
+  constructor (private imcService: ImcService){ }
+  
   private _resultadoIMC: number
+  private teste = 'TETE'
   public DadosIMC = new Imc();
 
-  constructor (private imcService: ImcService){ }
-  ngOnInit() {}
-  calcularImc(){
-    const ValorImc = document.getElementById('ValorImc')
+  calcular_Imc(){
     this._resultadoIMC = this.imcService.calcularImc(this.DadosIMC)
-    ValorImc.innerHTML = this._resultadoIMC.toString()
+    
+    //Coloquei isso aqui abaixo porq  ue quando colocava no HTML um campo ion-label 
+    //com o ngModel recebendo o resultado ele tava quebrando a página
+    document.getElementById('ValorImc').innerHTML = this._resultadoIMC.toString()
   }
+
+  ngOnInit() {}
+  
 }

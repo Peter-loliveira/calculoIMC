@@ -21,7 +21,7 @@
 
   <ion-row>
     <ion-col>
-      <ion-fab-button mode =  'ios' (click)="calcularImc()">
+      <ion-fab-button mode =  'ios' (click)="calcular_Imc()">
         Calcular
       </ion-fab-button>
     </ion-col>
@@ -31,6 +31,10 @@
 
 <ion-footer>
   <ion-item class="resultados">
+    <!-- <ion-input [(ngModel)] = '_resultadoIMC'></ion-input> -->
+    <!-- Estava usando esse ai de cima, mas ele me deu dor de cabeça no alinhamento -->
+    <!-- Dai resolvi usar esse ai de baixo. -->
+    <!-- Mas ambos funcionam -->
     <ion-label id='ValorImc'></ion-label>
   </ion-item>
 </ion-footer>

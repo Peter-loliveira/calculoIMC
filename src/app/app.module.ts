@@ -11,8 +11,6 @@ import { AppComponent } from './app.component';
 import { AppRoutingModule } from './app-routing.module';
 import { ImcService } from 'src/services/ImcService';
 
-import { HttpClientModule } from '@angular/common/http'
-
 @NgModule({
   declarations: [AppComponent],
   entryComponents: [],
@@ -20,7 +18,7 @@ import { HttpClientModule } from '@angular/common/http'
     BrowserModule, 
     IonicModule.forRoot(), 
     AppRoutingModule, 
-    HttpClientModule],
+],
   providers: [
     StatusBar,
     SplashScreen,
